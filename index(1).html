@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红楼梦诗词小游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>红楼梦诗词小游戏</h1>
+            <p class="game-description">测试你对《红楼梦》中经典诗词的了解程度</p>
+        </header>
+
+        <div class="game-status">
+            <div class="level-info">
+                <span>关卡: <span id="current-level">1</span>/<span id="total-levels">10</span></span>
+            </div>
+            <div class="score-info">
+                <span>总分: <span id="total-score">0</span></span>
+            </div>
+        </div>
+
+        <main class="game-main">
+            <div class="question-section">
+                <p id="question-text">请填写诗词中的缺失部分</p>
+            </div>
+
+            <div class="answer-section">
+                <input type="text" id="user-answer" placeholder="请输入答案" autocomplete="off">
+                <button id="submit-btn">提交答案</button>
+            </div>
+
+            <div class="feedback-section" id="feedback-section" style="display: none;">
+                <div class="score-display">
+                    <h3>评分结果</h3>
+                    <p id="score-result">得分: 0/100</p>
+                    <div class="score-bar">
+                        <div class="score-fill" id="score-fill"></div>
+                    </div>
+                </div>
+
+                <div class="explanation-section">
+                    <h3>诗词解析</h3>
+                    <div class="explanation-content" id="explanation-content">
+                        <!-- 解析内容将通过JavaScript动态加载 -->
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button id="next-btn">下一关</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-over" id="game-over" style="display: none;">
+            <h2>游戏结束</h2>
+            <p class="final-score">最终得分: <span id="final-score">0</span></p>
+            <p class="game-result" id="game-result">继续加油！</p>
+            <button id="restart-btn">重新开始</button>
+        </div>
+    </div>
+
+    <script src="poems.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
