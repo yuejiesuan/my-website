@@ -1,0 +1,349 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', serif;
+    background-color: #f5f0e6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 游戏容器 */
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d4a76a;
+}
+
+header h1 {
+    color: #8b4513;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-description {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* 游戏状态 */
+.game-status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #faf5e9;
+    border-radius: 8px;
+    border-left: 4px solid #d4a76a;
+}
+
+.level-info, .score-info {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+/* 主要游戏区域 */
+.game-main {
+    margin-bottom: 30px;
+}
+
+/* 诗词部分 */
+.poem-section {
+    background-color: #faf5e9;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #e8d5b7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#poem-title {
+    color: #8b4513;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.poem-content {
+    font-size: 1.3em;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+.missing-part {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-bottom: 2px solid #d4a76a;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.poem-author {
+    text-align: right;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* 问题部分 */
+.question-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f9f3e5;
+    border-radius: 8px;
+    border-left: 4px solid #8b4513;
+}
+
+.question-section h3 {
+    color: #8b4513;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+#question-text {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* 答案部分 */
+.answer-section {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#user-answer {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #d4a76a;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#user-answer:focus {
+    border-color: #8b4513;
+}
+
+#submit-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #d4a76a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: #b8860b;
+}
+
+#submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* 反馈部分 */
+.feedback-section {
+    background-color: #faf5e9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e8d5b7;
+    margin-bottom: 30px;
+}
+
+.score-display {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.score-display h3 {
+    color: #8b4513;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+#score-result {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #d4a76a;
+}
+
+.score-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.score-fill {
+    height: 100%;
+    background-color: #d4a76a;
+    transition: width 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+/* 解析部分 */
+.explanation-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f9f3e5;
+    border-radius: 8px;
+    border-left: 4px solid #d4a76a;
+}
+
+.explanation-section h3 {
+    color: #8b4513;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.explanation-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 导航按钮 */
+.navigation-buttons {
+    text-align: center;
+}
+
+#next-btn {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+    background-color: #654321;
+}
+
+#next-btn:active {
+    transform: translateY(1px);
+}
+
+/* 游戏结束 */
+.game-over {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #faf5e9;
+    border-radius: 8px;
+    border: 2px solid #d4a76a;
+}
+
+.game-over h2 {
+    color: #8b4513;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.final-score {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #d4a76a;
+    font-weight: bold;
+}
+
+#restart-btn {
+    padding: 15px 40px;
+    font-size: 1.3em;
+    background-color: #d4a76a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #b8860b;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .game-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .game-status {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .poem-content {
+        font-size: 1.1em;
+    }
+
+    .answer-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #user-answer {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .poem-section {
+        padding: 15px;
+    }
+
+    #poem-title {
+        font-size: 1.5em;
+    }
+
+    .poem-content {
+        font-size: 1em;
+    }
+
+    .missing-part {
+        width: 120px;
+    }
+}
